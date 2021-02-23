@@ -1,0 +1,7 @@
+---
+applications:
+- name: jenkins-wf-demo
+  disk_quota: 2G
+  memory: 2G
+  docker:
+    image: jenkins/jenkins
