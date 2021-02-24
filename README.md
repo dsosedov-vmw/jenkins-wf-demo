@@ -1,11 +1,13 @@
 # Jenkins Demo
 
 ## Demo 0
+Create Freestyle project
 ```bash
 echo 'Hello Jenkins Demo 0!'
 ```
 
 ## Demo 1
+Create Pipeline project
 ### Step 1
 ```groovy
 pipeline {
@@ -71,35 +73,4 @@ pipeline {
 }
 ```
 ### Step 5
-```groovy
-pipeline {
-    agent any
-
-    environment {
-        NAME = credentials('foo')
-    }
-
-    stages {
-        stage('Hello') {
-            steps {
-                sh 'echo "Hello $NAME Demo 1!"'
-            }
-        }
-        stage('Build') {
-            steps {
-                echo 'Building...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-            }
-        }
-    }
-}
-```
+Use Jenkinsfile
