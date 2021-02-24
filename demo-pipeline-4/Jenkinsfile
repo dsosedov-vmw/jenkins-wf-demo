@@ -1,0 +1,17 @@
+pipeline {
+    agent {
+        label 'cdPipeline'
+    }
+
+    environment {
+        FOO = credentials('foo')
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh "echo 'Hello $FOO'"
+            }
+        }
+    }
+}
