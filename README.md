@@ -46,7 +46,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello $NAME Demo 1!'
+                echo "Hello $NAME Demo 1!"
             }
         }
     }
@@ -64,13 +64,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh """
-                    if [ $NAME == 'Jenkins' ]; then
-                        echo "Hello Jenkins Demo 1!"
-                    else
-                        echo "Hello $NAME Demo 1!"
-                    fi
-                """
+                echo "Hello $NAME Demo 1!"
             }
         }
     }
@@ -88,13 +82,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh """
-                    if [ $NAME == 'Jenkins' ]; then
-                        echo "Hello Jenkins Demo 1!"
-                    else
-                        echo "Hello $NAME Demo 1!"
-                    fi
-                """
+                sh 'echo "Hello $NAME Demo 1!"'
             }
         }
         stage('Build') {
